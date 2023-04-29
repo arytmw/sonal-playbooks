@@ -1,0 +1,9 @@
+---
+- name: installing the nginx package
+  hosts: all
+  become: true
+  tasks:
+    - name: ensure that the nginx package is installed
+      ansible.builtin.yum:
+        name: nginx
+        state: present
