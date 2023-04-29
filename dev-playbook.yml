@@ -1,0 +1,9 @@
+---
+- name: simple dev playbook
+  hosts: all
+  become: true
+  tasks:
+    - name: update all systems
+      ansible.builtin.yum:
+        name: "*"
+        state: latest
